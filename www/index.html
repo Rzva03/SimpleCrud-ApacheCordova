@@ -58,7 +58,7 @@
       Agregar Alumno
     </a>
     <div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
-      <form>
+      <form id="studentForm">
         <div style="padding: 10px 20px;">
           <h3>Nuevo Alumno</h3>
           <!-- control, nombre, carrera,semestre, grupo -->
@@ -145,6 +145,8 @@
       </tbody>
     </table>
     <!-- </div> -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
     <script src="cordova.js"></script>
     <script src="js/index.js"></script>
   </body>
