@@ -48,19 +48,10 @@
   </head>
   <body>
     <h1 class="ui-title">ESTUDIANTES</h1>
-    <a
-      href="#popupLogin"
-      data-rel="popup"
-      data-position-to="window"
-      class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-plus ui-btn-icon-left ui-btn-a btn-apopup"
-      data-transition="pop"
-    >
-      Agregar Alumno
-    </a>
-    <div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
+    <section id="newStudent">
       <form id="studentForm">
         <div style="padding: 10px 20px;">
-          <h3>Nuevo Alumno</h3>
+          <!-- <h3>Nuevo Alumno</h3> -->
           <!-- control, nombre, carrera,semestre, grupo -->
           <label for="textinput-s">Número de control</label>
           <input
@@ -82,6 +73,7 @@
           />
           <label for="select-native-s">Carrera</label>
           <select name="select-carreras" id="select-native-s">
+            <option selected>Seleccione la carrera</option>
             <option value="informática">Informática</option>
             <option value="tics">Tics</option>
             <option value="biologia">Biología</option>
@@ -114,8 +106,21 @@
           </button>
         </div>
       </form>
-    </div>
-    <table
+    </section>
+    <!-- /footer -->
+    <!-- <a
+      href="#popupLogin"
+      data-rel="popup"
+      data-position-to="window"
+      class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-plus ui-btn-icon-left ui-btn-a btn-apopup"
+      data-transition="pop"
+    >
+      Agregar Alumno
+    </a> -->
+    <!-- <div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all"> -->
+
+    <!-- </div> -->
+    <!-- <table
       data-role="table"
       id="table-column-toggle"
       data-mode="columntoggle"
@@ -143,11 +148,11 @@
           </td>
         </tr>
       </tbody>
-    </table>
+    </table> -->
     <!-- </div> -->
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
-    <script src="cordova.js"></script>
+    <!-- <script http-equiv="Content-Security-Policy" type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script> -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script> -->
     <script src="js/index.js"></script>
+    <!-- <script src="cordova.js"></script> -->
   </body>
 </html>
