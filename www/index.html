@@ -51,10 +51,9 @@
     <section id="newStudent">
       <form id="studentForm">
         <div style="padding: 10px 20px;">
-          <!-- <h3>Nuevo Alumno</h3> -->
-          <!-- control, nombre, carrera,semestre, grupo -->
           <label for="textinput-s">Número de control</label>
           <input
+            required
             type="text"
             name="control"
             id="textinput-s"
@@ -64,6 +63,7 @@
           />
           <label for="textinput-s">Nombre</label>
           <input
+            required
             type="text"
             name="name"
             id="textinput-s"
@@ -72,8 +72,8 @@
             data-clear-btn="true"
           />
           <label for="select-native-s">Carrera</label>
-          <select name="select-carreras" id="select-native-s">
-            <option selected>Seleccione la carrera</option>
+          <select required name="select-carreras" id="select-native-s">
+            <option value="0" selected>Seleccione la carrera</option>
             <option value="informática">Informática</option>
             <option value="tics">Tics</option>
             <option value="biologia">Biología</option>
@@ -82,6 +82,7 @@
           </select>
           <label for="textinput-s">Semestre</label>
           <input
+            required
             type="text"
             name="semestre"
             id="textinput-s"
@@ -91,6 +92,7 @@
           />
           <label for="textinput-s">Grupo</label>
           <input
+            required
             type="text"
             name="grupo"
             id="textinput-s"
@@ -107,52 +109,7 @@
         </div>
       </form>
     </section>
-    <!-- /footer -->
-    <!-- <a
-      href="#popupLogin"
-      data-rel="popup"
-      data-position-to="window"
-      class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-plus ui-btn-icon-left ui-btn-a btn-apopup"
-      data-transition="pop"
-    >
-      Agregar Alumno
-    </a> -->
-    <!-- <div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all"> -->
-
-    <!-- </div> -->
-    <!-- <table
-      data-role="table"
-      id="table-column-toggle"
-      data-mode="columntoggle"
-      class="ui-responsive table-stroke"
-    >
-      <thead>
-        <tr>
-          <th>MÁTRICULA</th>
-          <th>NOMBRE</th>
-          <th data-priority="1">ACCIONES</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>17920368</th>
-          <td>
-            Abraham Víctor Zaragoza Rodríguez
-          </td>
-          <td>
-            <button
-              class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-eye ui-btn-icon-notext"
-            >
-              Consultar
-            </button>
-          </td>
-        </tr>
-      </tbody>
-    </table> -->
-    <!-- </div> -->
-    <!-- <script http-equiv="Content-Security-Policy" type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script> -->
-    <!-- <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script> -->
     <script src="js/index.js"></script>
-    <!-- <script src="cordova.js"></script> -->
+    <script src="cordova.js"></script>
   </body>
 </html>
