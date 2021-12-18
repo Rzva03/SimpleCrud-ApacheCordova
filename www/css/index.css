@@ -124,3 +124,13 @@ h1 {
     background-image: linear-gradient(to bottom, #585858 0%, #1b1b1b 51%);
   }
 }
+.ui-title {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+.btn-apopup {
+  width: 80%;
+  display: block;
+  margin-right: 100px;
+  text-align: left;
+}

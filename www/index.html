@@ -47,70 +47,108 @@
     <title>Crud</title>
   </head>
   <body>
-    <h1>ESTUDIANTES</h1>
+    <h1 class="ui-title">ESTUDIANTES</h1>
     <a
       href="#popupLogin"
       data-rel="popup"
       data-position-to="window"
-      class="
-        ui-btn
-        ui-corner-all
-        ui-shadow
-        ui-btn-inline
-        ui-icon-check
-        ui-btn-icon-left
-        ui-btn-a
-      "
+      class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-plus ui-btn-icon-left ui-btn-a btn-apopup"
       data-transition="pop"
-      >Sign in</a
     >
+      Agregar Alumno
+    </a>
     <div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
-          
       <form>
-                
-        <div style="padding: 10px 20px">
-                      
-          <h3>Please sign in</h3>
-                      <label for="un" class="ui-hidden-accessible"
-            >Username:</label
-          >
-                      <input
+        <div style="padding: 10px 20px;">
+          <h3>Nuevo Alumno</h3>
+          <!-- control, nombre, carrera,semestre, grupo -->
+          <label for="textinput-s">Número de control</label>
+          <input
             type="text"
-            name="user"
-            id="un"
+            name="control"
+            id="textinput-s"
+            placeholder="Número de control"
             value=""
-            placeholder="username"
-            data-theme="a"
+            data-clear-btn="true"
           />
-                      <label for="pw" class="ui-hidden-accessible"
-            >Password:</label
-          >
-                      <input
-            type="password"
-            name="pass"
-            id="pw"
+          <label for="textinput-s">Nombre</label>
+          <input
+            type="text"
+            name="name"
+            id="textinput-s"
+            placeholder="Nombre"
             value=""
-            placeholder="password"
-            data-theme="a"
+            data-clear-btn="true"
           />
-                      <button
+          <label for="select-native-s">Carrera</label>
+          <select name="select-carreras" id="select-native-s">
+            <option value="informática">Informática</option>
+            <option value="tics">Tics</option>
+            <option value="biologia">Biología</option>
+            <option value="forestal">Forestal</option>
+            <option value="agronomia">Agronomía</option>
+          </select>
+          <label for="textinput-s">Semestre</label>
+          <input
+            type="text"
+            name="semestre"
+            id="textinput-s"
+            placeholder="Semestre"
+            value=""
+            data-clear-btn="true"
+          />
+          <label for="textinput-s">Grupo</label>
+          <input
+            type="text"
+            name="grupo"
+            id="textinput-s"
+            placeholder="Grupo"
+            value=""
+            data-clear-btn="true"
+          />
+          <button
             type="submit"
-            class="
-              ui-btn
-              ui-corner-all
-              ui-shadow
-              ui-btn-b
-              ui-btn-icon-left
-              ui-icon-check
-            "
+            class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check"
           >
-            Sign in
+            Agregar
           </button>
-                  
         </div>
-            
       </form>
     </div>
+    <table
+      data-role="table"
+      id="table-column-toggle"
+      data-mode="columntoggle"
+      class="ui-responsive table-stroke"
+    >
+      <thead>
+        <tr>
+          <th data-priority="2">Rank</th>
+          <th>Movie Title</th>
+          <th data-priority="3">Year</th>
+          <th data-priority="1">
+            <abbr title="Rotten Tomato Rating">Rating</abbr>
+          </th>
+          <th data-priority="5">Reviews</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>1</th>
+          <td>
+            <a
+              href="http://en.wikipedia.org/wiki/Citizen_Kane"
+              data-rel="external"
+            >
+              Citizen Kane
+            </a>
+          </td>
+          <td>1941</td>
+          <td>100%</td>
+          <td>74</td>
+        </tr>
+      </tbody>
+    </table>
     <!-- </div> -->
     <script src="cordova.js"></script>
     <script src="js/index.js"></script>
