@@ -5,7 +5,14 @@ function onDeviceReady() {
   document.getElementById("deviceready").classList.add("ready");
 }
 const form = document.getElementById("studentForm");
+const btnConsult = document.getElementById("btnConsult");
 let ArrayStudent = [];
+let boolStudent = false;
+let nombre = document.getElementById("textNombre"),
+  carrera = document.getElementById("select-carreras"),
+  semestre = document.getElementById("semestre"),
+  grupo = document.getElementById("grupo"),
+  control = document.getElementById("controlValue");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   let formData = new FormData(form);
@@ -17,14 +24,21 @@ form.addEventListener("submit", (e) => {
     form.reset();
   }
 });
-
+btnConsult.addEventListener("click", (e) => {
+  const controlValue = document.getElementById("controlValue").value;
+  e.preventDefault();
+  if (controlValue == "") {
+    alert("Inserte un número de control para continuar");
+  } else {
+    searchStudent(controlValue);
+  }
+});
 function convertToObjet(formData) {
   let control = formData.get("control");
   let name = formData.get("name");
   let carrera = formData.get("select-carreras");
   let semestre = formData.get("semestre");
   let grupo = formData.get("grupo");
-
   return {
     control: control,
     name: name,
@@ -37,4 +51,23 @@ function convertToObjet(formData) {
 function saveToArray(studentObj) {
   ArrayStudent.push(studentObj);
   console.log(ArrayStudent);
+}
+
+function searchStudent(controlValue) {
+  ArrayStudent.forEach((element) => {
+    if (element.control == controlValue) {
+      control.value = element.control;
+      nombre.value = element.name;
+      //   carrera = element.carrera;
+      semestre.value = element.semestre;
+      grupo.value = element.grupo;
+      boolStudent = true;
+    }
+  });
+  if (!boolStudent) {
+    alert("No existe alumno");
+  } else {
+    boolStudent = false;
+    console.log("falso");
+  }
 }

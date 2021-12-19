@@ -51,28 +51,28 @@
     <section id="newStudent">
       <form id="studentForm">
         <div style="padding: 10px 20px;">
-          <label for="textinput-s">Número de control</label>
+          <label for="controlValue">Número de control</label>
           <input
             required
             type="text"
             name="control"
-            id="textinput-s"
+            id="controlValue"
             placeholder="Número de control"
             value=""
             data-clear-btn="true"
           />
-          <label for="textinput-s">Nombre</label>
+          <label for="textNombre">Nombre</label>
           <input
             required
             type="text"
             name="name"
-            id="textinput-s"
+            id="textNombre"
             placeholder="Nombre"
             value=""
             data-clear-btn="true"
           />
-          <label for="select-native-s">Carrera</label>
-          <select required name="select-carreras" id="select-native-s">
+          <label for="select-carreras">Carrera</label>
+          <select required name="select-carreras" id="select-carreras">
             <option value="0" selected>Seleccione la carrera</option>
             <option value="informática">Informática</option>
             <option value="tics">Tics</option>
@@ -80,22 +80,22 @@
             <option value="forestal">Forestal</option>
             <option value="agronomia">Agronomía</option>
           </select>
-          <label for="textinput-s">Semestre</label>
+          <label for="semestre">Semestre</label>
           <input
             required
             type="text"
             name="semestre"
-            id="textinput-s"
+            id="semestre"
             placeholder="Semestre"
             value=""
             data-clear-btn="true"
           />
-          <label for="textinput-s">Grupo</label>
+          <label for="grupo">Grupo</label>
           <input
             required
             type="text"
             name="grupo"
-            id="textinput-s"
+            id="grupo"
             placeholder="Grupo"
             value=""
             data-clear-btn="true"
@@ -108,6 +108,12 @@
           </button>
         </div>
       </form>
+      <button
+        id="btnConsult"
+        class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-search"
+      >
+        Consultar
+      </button>
     </section>
     <script src="js/index.js"></script>
     <script src="cordova.js"></script>
