@@ -13,6 +13,8 @@ let nombre = document.getElementById("textNombre"),
   semestre = document.getElementById("semestre"),
   grupo = document.getElementById("grupo"),
   control = document.getElementById("controlValue");
+let opts = carrera.options;
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   let formData = new FormData(form);
@@ -58,6 +60,14 @@ function searchStudent(controlValue) {
     if (element.control == controlValue) {
       control.value = element.control;
       nombre.value = element.name;
+      //   carrera.setAttribute("selected");
+      for (let opt, j = 0; (opt = opts[j]); j++) {
+        if (opt.value == "informatica") {
+          carrera.selectedIndex = j;
+          break;
+        }
+      }
+
       //   carrera = element.carrera;
       semestre.value = element.semestre;
       grupo.value = element.grupo;
